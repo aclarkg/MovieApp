@@ -8,10 +8,12 @@ namespace MvcMovie.Models
 {
     public class Movie
     {
-        [Display(Name = "Release Date")]
-        [DataType(DataType.Date)]
+        
+       // [DataType(DataType.Date)]
         public int ID { get; set; }
         public string Title { get; set; }
+        [Display(Name = "Release Date")]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTime ReleaseDate { get; set; }
         public string Genre { get; set; }
         public decimal Price { get; set; }
