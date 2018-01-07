@@ -1,2 +1,2 @@
 # MovieApp
-ASP/C#.NET project.
+ASP/C#.NET project using MVC.
