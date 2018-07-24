@@ -17,6 +17,7 @@ namespace MvcMovie.Controllers
         // GET: Movies
         public ActionResult Index(string movieGenre, string searchString)
         {
+            // Fill dropdowns
             var GenreQry = from m in db.Movies
                            orderby m.Genre
                            select m.Genre;
@@ -48,6 +49,7 @@ namespace MvcMovie.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            // Find movies
             Movie movie = db.Movies.Find(id);
             if (movie == null)
             {
